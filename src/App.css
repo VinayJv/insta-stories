@@ -1,0 +1,113 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+/* #root{
+
+} */
+
+#App {
+  position: relative;
+  max-width: 600px;
+  height: 100dvh;
+}
+
+#storyComponent{
+  display: flex;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+#storyComponent::-webkit-scrollbar {
+  display: none;
+}
+
+#individualStory{
+  position: relative;
+  min-width: 60px;
+  max-height: 60px;
+  overflow: hidden;
+
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+#individualStory::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right,
+    #833ab4,#fd1d1d,#fcb045
+  );
+  mask:
+    linear-gradient(#000 0 0) padding-box, 
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+#storyImage{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#storyModal{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+}
+
+#modalImage{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#floatingButton{
+  position: absolute;
+  right: 0;
+  font-size: 32px;
+  margin: 16px;
+
+  background: none;
+	color: white;
+  text-shadow: 2px 0px 2px black;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+
+.ModalUIButton{
+  position: absolute;
+  top: 10%;
+  width: 10%;
+  height: 90%;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+#nextButton{
+ right: 0;
+}
+
+/* #prevButton{
+  
+} */
+
